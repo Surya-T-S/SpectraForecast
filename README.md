@@ -52,20 +52,49 @@ Core idea:
 | ![Metrics Comparison](./figures/metrics_comparison.png) | ![Time Series](./figures/time_series.png) |
 
 ## All Visual Outputs
-All generated PNG files are available in `figures/` and visible on GitHub.
+All generated PNG files are shown below.
 
-- [ablation.png](./figures/ablation.png)
-- [cnn_architecture.png](./figures/cnn_architecture.png)
-- [fft_spectrum.png](./figures/fft_spectrum.png)
-- [metrics_comparison.png](./figures/metrics_comparison.png)
-- [predictions_INFY.NS.png](./figures/predictions_INFY.NS.png)
-- [predictions_RELIANCE.NS.png](./figures/predictions_RELIANCE.NS.png)
-- [predictions_TCS.NS.png](./figures/predictions_TCS.NS.png)
-- [spectrograms.png](./figures/spectrograms.png)
-- [time_series.png](./figures/time_series.png)
-- [training_curve_INFY.NS.png](./figures/training_curve_INFY.NS.png)
-- [training_curve_RELIANCE.NS.png](./figures/training_curve_RELIANCE.NS.png)
-- [training_curve_TCS.NS.png](./figures/training_curve_TCS.NS.png)
+### Core Visuals
+
+#### CNN Architecture
+![CNN Architecture](./figures/cnn_architecture.png)
+
+#### Ablation Summary
+![Ablation Summary](./figures/ablation.png)
+
+#### Metrics Comparison
+![Metrics Comparison](./figures/metrics_comparison.png)
+
+#### Time Series Overview
+![Time Series](./figures/time_series.png)
+
+#### FFT Spectrum
+![FFT Spectrum](./figures/fft_spectrum.png)
+
+#### Spectrogram Samples
+![Spectrogram Samples](./figures/spectrograms.png)
+
+### Training Curves
+
+#### RELIANCE.NS Training Curve
+![Training Curve RELIANCE.NS](./figures/training_curve_RELIANCE.NS.png)
+
+#### TCS.NS Training Curve
+![Training Curve TCS.NS](./figures/training_curve_TCS.NS.png)
+
+#### INFY.NS Training Curve
+![Training Curve INFY.NS](./figures/training_curve_INFY.NS.png)
+
+### Prediction Diagnostics
+
+#### RELIANCE.NS Predictions
+![Predictions RELIANCE.NS](./figures/predictions_RELIANCE.NS.png)
+
+#### TCS.NS Predictions
+![Predictions TCS.NS](./figures/predictions_TCS.NS.png)
+
+#### INFY.NS Predictions
+![Predictions INFY.NS](./figures/predictions_INFY.NS.png)
 
 ## Data Snapshot
 - Raw downloads: `data/raw/`
