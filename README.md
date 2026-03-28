@@ -34,37 +34,14 @@ Core idea:
 |---|---|
 | ![CNN Architecture](./figures/cnn_architecture.png) | ![Ablation](./figures/ablation.png) |
 
-If images do not render on GitHub, make sure these files are committed:
-- figures/cnn_architecture.png
-- figures/ablation.png
+## Data Snapshot
+- Raw downloads: `data/raw/`
+- Engineered features and splits: `data/processed/`
+- Spectrogram tensors: `data/spectrograms/`
+- Trained checkpoints: `models/`
+- Evaluation and experiment visuals: `figures/`
 
-## Data Pipeline (Intuitive View)
-The data moves through the project in this order:
-
-1. Raw market download
-    - data/raw/{ticker}.csv
-    - data/raw/merged_raw.csv
-
-2. Feature engineering and split
-    - data/processed/{company}_features.csv
-    - data/processed/{company}_train.csv
-    - data/processed/{company}_val.csv
-    - data/processed/{company}_test.csv
-    - data/processed/{company}_scaler.pkl
-
-3. Spectrogram sample generation
-    - data/spectrograms/{company}_X_train.npy
-    - data/spectrograms/{company}_y_train.npy
-    - data/spectrograms/{company}_X_val.npy
-    - data/spectrograms/{company}_y_val.npy
-    - data/spectrograms/{company}_X_test.npy
-    - data/spectrograms/{company}_y_test.npy
-
-4. Training, evaluation, and experiments
-    - models/{company}_best.pth
-    - data/processed/metrics.csv
-    - data/processed/ablation_results.csv
-    - figures/*.png
+For complete implementation details, see the scripts in `src/`.
 
 ## Project Structure
 ```text
