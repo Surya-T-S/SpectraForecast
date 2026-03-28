@@ -17,10 +17,10 @@
 - CNN regressor with reproducible experiments and saved artifacts
 - Comparative evaluation and ablation analysis with published figures
 
-## Author
+## Author Info
 
-### Surya T S
-#### University ID: TCR24CS069
+### Name: Surya T S
+#### KTU Register Number: TCR24CS069
 
 ## Overview
 This repository presents an end-to-end stock forecasting system that converts financial time series into STFT spectrograms and predicts future close price using a CNN regressor.
