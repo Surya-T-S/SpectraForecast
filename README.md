@@ -114,40 +114,32 @@ The model has three convolutional blocks followed by a regression head:
 Total trainable parameters: 682,273
 
 ## How to Run
-Step 1
+1. Clone and open the project
+```bash
+git clone https://github.com/Surya-T-S/SpectraForecast.git
+cd SpectraForecast/stock-forecasting
+```
+
+2. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-Step 2
+3. Run the pipeline in order
 ```bash
 python src/01_data_collection.py
-```
-
-Step 3
-```bash
 python src/02_feature_engineering.py
-```
-
-Step 4
-```bash
 python src/03_spectrogram_generator.py
-```
-
-Step 5
-```bash
 python src/06_train.py
-```
-
-Step 6
-```bash
 python src/07_evaluate.py
-```
-
-Step 7
-```bash
 python src/08_ablation.py
 ```
+
+4. Check outputs
+- Metrics: `data/processed/metrics.csv`
+- Ablation: `data/processed/ablation_results.csv`
+- Figures: `figures/`
+- Best models: `models/`
 
 ## Reproducibility
 - Config-driven experiment settings are managed in `config.yaml`
