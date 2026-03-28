@@ -38,18 +38,22 @@ Core idea:
 
 ## Quick Visuals
 
-| CNN Architecture | Ablation Summary |
+| Time Series Plot | Frequency Spectrum |
 |---|---|
-| ![CNN Architecture](./figures/cnn_architecture.png) | ![Ablation](./figures/ablation.png) |
+| ![Time Series](./figures/time_series.png) | ![Frequency Spectrum](./figures/fft_spectrum.png) |
 
-| Metrics Comparison | Time-Series Snapshot |
+| Spectrogram | CNN Architecture Diagram |
 |---|---|
-| ![Metrics Comparison](./figures/metrics_comparison.png) | ![Time Series](./figures/time_series.png) |
+| ![Spectrogram](./figures/spectrograms.png) | ![CNN Architecture](./figures/cnn_architecture.png) |
 
 ## Additional Visuals
-Only the most important visuals are shown above.
+The four most important visuals are shown above:
+- Time series plot
+- Frequency spectrum
+- Spectrogram
+- CNN architecture diagram
 
-Please explore all generated plots in the figures folder:
+For deeper analysis and additional outputs, explore the full figures directory:
 - [figures](./figures)
 
 ## Data Snapshot
