@@ -19,10 +19,8 @@
 
 ## Author
 
-<p>
-    <strong><span style="font-size: 5.5em;">Surya T S</span></strong><br/>
-    <strong><span style="font-size: 5.5em;">University ID: TCR24CS069</span></strong>
-</p>
+### Surya T S
+#### University ID: TCR24CS069
 
 ## Overview
 This repository presents an end-to-end stock forecasting system that converts financial time series into STFT spectrograms and predicts future close price using a CNN regressor.
