@@ -20,7 +20,7 @@
 ## Author Info
 
 ### Name: Surya T S
-#### KTU Register Number: TCR24CS069
+### KTU Register Number: TCR24CS069
 
 ## Overview
 This repository presents an end-to-end stock forecasting system that converts financial time series into STFT spectrograms and predicts future close price using a CNN regressor.
