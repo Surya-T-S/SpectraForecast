@@ -34,6 +34,26 @@ Core idea:
 |---|---|
 | ![CNN Architecture](./figures/cnn_architecture.png) | ![Ablation](./figures/ablation.png) |
 
+| Metrics Comparison | Time-Series Snapshot |
+|---|---|
+| ![Metrics Comparison](./figures/metrics_comparison.png) | ![Time Series](./figures/time_series.png) |
+
+## All Visual Outputs
+All generated PNG files are available in `figures/` and visible on GitHub.
+
+- [ablation.png](./figures/ablation.png)
+- [cnn_architecture.png](./figures/cnn_architecture.png)
+- [fft_spectrum.png](./figures/fft_spectrum.png)
+- [metrics_comparison.png](./figures/metrics_comparison.png)
+- [predictions_INFY.NS.png](./figures/predictions_INFY.NS.png)
+- [predictions_RELIANCE.NS.png](./figures/predictions_RELIANCE.NS.png)
+- [predictions_TCS.NS.png](./figures/predictions_TCS.NS.png)
+- [spectrograms.png](./figures/spectrograms.png)
+- [time_series.png](./figures/time_series.png)
+- [training_curve_INFY.NS.png](./figures/training_curve_INFY.NS.png)
+- [training_curve_RELIANCE.NS.png](./figures/training_curve_RELIANCE.NS.png)
+- [training_curve_TCS.NS.png](./figures/training_curve_TCS.NS.png)
+
 ## Data Snapshot
 - Raw downloads: `data/raw/`
 - Engineered features and splits: `data/processed/`

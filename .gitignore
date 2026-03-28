@@ -46,6 +46,7 @@ models/*
 figures/*
 !models/.gitkeep
 !figures/.gitkeep
+!figures/*.png
 !figures/cnn_architecture.png
 !figures/ablation.png
 !figures/metrics_comparison.png
