@@ -18,8 +18,11 @@
 - Comparative evaluation and ablation analysis with published figures
 
 ## Author
-- Name: Surya T S
-- University ID: TCR24CS069
+
+<p>
+    <strong><span style="font-size: 1.2em;">Surya T S</span></strong><br/>
+    <strong><span style="font-size: 1.1em;">University ID: TCR24CS069</span></strong>
+</p>
 
 ## Overview
 This repository presents an end-to-end stock forecasting system that converts financial time series into STFT spectrograms and predicts future close price using a CNN regressor.
@@ -51,50 +54,11 @@ Core idea:
 |---|---|
 | ![Metrics Comparison](./figures/metrics_comparison.png) | ![Time Series](./figures/time_series.png) |
 
-## All Visual Outputs
-All generated PNG files are shown below.
+## Additional Visuals
+Only the most important visuals are shown above.
 
-### Core Visuals
-
-#### CNN Architecture
-![CNN Architecture](./figures/cnn_architecture.png)
-
-#### Ablation Summary
-![Ablation Summary](./figures/ablation.png)
-
-#### Metrics Comparison
-![Metrics Comparison](./figures/metrics_comparison.png)
-
-#### Time Series Overview
-![Time Series](./figures/time_series.png)
-
-#### FFT Spectrum
-![FFT Spectrum](./figures/fft_spectrum.png)
-
-#### Spectrogram Samples
-![Spectrogram Samples](./figures/spectrograms.png)
-
-### Training Curves
-
-#### RELIANCE.NS Training Curve
-![Training Curve RELIANCE.NS](./figures/training_curve_RELIANCE.NS.png)
-
-#### TCS.NS Training Curve
-![Training Curve TCS.NS](./figures/training_curve_TCS.NS.png)
-
-#### INFY.NS Training Curve
-![Training Curve INFY.NS](./figures/training_curve_INFY.NS.png)
-
-### Prediction Diagnostics
-
-#### RELIANCE.NS Predictions
-![Predictions RELIANCE.NS](./figures/predictions_RELIANCE.NS.png)
-
-#### TCS.NS Predictions
-![Predictions TCS.NS](./figures/predictions_TCS.NS.png)
-
-#### INFY.NS Predictions
-![Predictions INFY.NS](./figures/predictions_INFY.NS.png)
+Please explore all generated plots in the figures folder:
+- [figures](./figures)
 
 ## Data Snapshot
 - Raw downloads: `data/raw/`
