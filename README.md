@@ -105,34 +105,6 @@ The model has three convolutional blocks followed by a regression head:
 
 Total trainable parameters: 682,273
 
-## How to Run
-1. Clone and open the project
-```bash
-git clone https://github.com/Surya-T-S/SpectraForecast.git
-cd SpectraForecast/stock-forecasting
-```
-
-2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the pipeline in order
-```bash
-python src/01_data_collection.py
-python src/02_feature_engineering.py
-python src/03_spectrogram_generator.py
-python src/06_train.py
-python src/07_evaluate.py
-python src/08_ablation.py
-```
-
-4. Check outputs
-- Metrics: `data/processed/metrics.csv`
-- Ablation: `data/processed/ablation_results.csv`
-- Figures: `figures/`
-- Best models: `models/`
-
 ## Reproducibility
 - Config-driven experiment settings are managed in `config.yaml`
 - Random seeds are fixed in training and ablation scripts
@@ -167,6 +139,34 @@ python src/08_ablation.py
 - Feature Set B (close + technical indicators) improved over close-only baseline A.
 - RELIANCE.NS was easiest to model overall (lowest RMSE, best $R^2$).
 - TCS.NS showed the largest absolute errors, while INFY.NS had the highest relative error (MAPE).
+
+## How to Run
+1. Clone and open the project
+```bash
+git clone https://github.com/Surya-T-S/SpectraForecast.git
+cd SpectraForecast/stock-forecasting
+```
+
+2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the pipeline in order
+```bash
+python src/01_data_collection.py
+python src/02_feature_engineering.py
+python src/03_spectrogram_generator.py
+python src/06_train.py
+python src/07_evaluate.py
+python src/08_ablation.py
+```
+
+4. Check outputs
+- Metrics: `data/processed/metrics.csv`
+- Ablation: `data/processed/ablation_results.csv`
+- Figures: `figures/`
+- Best models: `models/`
 
 ## License
 This project is licensed under the MIT License. See `LICENSE` for details.
