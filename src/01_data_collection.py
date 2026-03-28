@@ -37,11 +37,24 @@ def fetch_and_merge_data(config: dict) -> pd.DataFrame:
                 print(f"Warning: failed to download usable data for {ticker}; skipping.")
                 continue
 
-            if df.empty or "Close" not in df.columns:
+            if df.empty:
                 print(f"Warning: failed to download usable data for {ticker}; skipping.")
                 continue
 
-            close_df = df[["Close"]].rename(columns={"Close": ticker})
+            # yfinance can return either flat or multi-index columns.
+            if "Close" in df.columns:
+                close_series = df["Close"]
+            elif isinstance(df.columns, pd.MultiIndex) and "Close" in df.columns.get_level_values(0):
+                close_series = df["Close"]
+            else:
+                print(f"Warning: Close column missing for {ticker}; skipping.")
+                continue
+
+            if isinstance(close_series, pd.DataFrame):
+                close_series = close_series.iloc[:, 0]
+
+            close_series = pd.to_numeric(close_series, errors="coerce")
+            close_df = close_series.to_frame(name=ticker)
             close_df.index.name = "Date"
             close_df.to_csv(raw_dir / f"{ticker}.csv")
             downloaded.append(close_df)

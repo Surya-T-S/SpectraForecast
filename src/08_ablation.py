@@ -77,6 +77,11 @@ def create_samples(
         window_df = df_features.iloc[i : i + w]
         x_spec = build_multichannel_spectrogram(window_df, signal_cfg)
 
+        # Ensure enough time bins for two 2x2 pooling layers.
+        if x_spec.shape[2] < 4:
+            pad_t = 4 - x_spec.shape[2]
+            x_spec = np.pad(x_spec, ((0, 0), (0, 0), (0, pad_t)), mode="constant")
+
         target_idx = i + w + delta_t - 1
         y_val = raw_close_series.iloc[target_idx]
         if pd.isna(y_val):

@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
+from torch.utils.data import DataLoader
 import yaml
 
 
@@ -48,6 +49,22 @@ def load_config(config_path: Path) -> dict[str, Any]:
 
 def train_company(company: str, config: dict[str, Any]) -> tuple[nn.Module, dict[str, Any]]:
     train_loader, val_loader, _ = get_dataloaders(company, config)
+
+    # Rebuild with single-process workers to avoid pickling issues when modules
+    # are loaded dynamically from numeric filenames.
+    batch_size = config["training"]["batch_size"]
+    train_loader = DataLoader(
+        train_loader.dataset,
+        batch_size=batch_size,
+        shuffle=True,
+        num_workers=0,
+    )
+    val_loader = DataLoader(
+        val_loader.dataset,
+        batch_size=batch_size,
+        shuffle=False,
+        num_workers=0,
+    )
 
     model = SpectrogramCNN().to(device)
 
