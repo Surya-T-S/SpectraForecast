@@ -38,12 +38,17 @@ data/spectrograms/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/spectrograms/.gitkeep
+!data/processed/metrics.csv
+!data/processed/ablation_results.csv
 
 # Trained models and figures
 models/*
 figures/*
 !models/.gitkeep
 !figures/.gitkeep
+!figures/cnn_architecture.png
+!figures/ablation.png
+!figures/metrics_comparison.png
 
 # Large binary artifacts
 *.npy

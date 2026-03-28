@@ -32,7 +32,39 @@ Core idea:
 
 | CNN Architecture | Ablation Summary |
 |---|---|
-| ![CNN Architecture](figures/cnn_architecture.png) | ![Ablation](figures/ablation.png) |
+| ![CNN Architecture](./figures/cnn_architecture.png) | ![Ablation](./figures/ablation.png) |
+
+If images do not render on GitHub, make sure these files are committed:
+- figures/cnn_architecture.png
+- figures/ablation.png
+
+## Data Pipeline (Intuitive View)
+The data moves through the project in this order:
+
+1. Raw market download
+    - data/raw/{ticker}.csv
+    - data/raw/merged_raw.csv
+
+2. Feature engineering and split
+    - data/processed/{company}_features.csv
+    - data/processed/{company}_train.csv
+    - data/processed/{company}_val.csv
+    - data/processed/{company}_test.csv
+    - data/processed/{company}_scaler.pkl
+
+3. Spectrogram sample generation
+    - data/spectrograms/{company}_X_train.npy
+    - data/spectrograms/{company}_y_train.npy
+    - data/spectrograms/{company}_X_val.npy
+    - data/spectrograms/{company}_y_val.npy
+    - data/spectrograms/{company}_X_test.npy
+    - data/spectrograms/{company}_y_test.npy
+
+4. Training, evaluation, and experiments
+    - models/{company}_best.pth
+    - data/processed/metrics.csv
+    - data/processed/ablation_results.csv
+    - figures/*.png
 
 ## Project Structure
 ```text
@@ -77,15 +109,15 @@ stock-forecasting/
 │   └── {company}_best.pth               # Best checkpoint per company
 ├── notebooks/                           # Optional exploratory notebooks
 └── src/
-        ├── __init__.py
-        ├── 01_data_collection.py            # Download and merge raw market data
-        ├── 02_feature_engineering.py        # Feature generation, scaling, split exports
-        ├── 03_spectrogram_generator.py      # STFT spectrogram sample creation
-        ├── 04_dataset.py                    # PyTorch Dataset and DataLoader helpers
-        ├── 05_model.py                      # SpectrogramCNN architecture definition
-        ├── 06_train.py                      # Training loop, scheduler, early stopping
-        ├── 07_evaluate.py                   # Test inference, metrics, and plots
-        └── 08_ablation.py                   # Window/horizon/feature-set ablation study
+    ├── __init__.py
+    ├── 01_data_collection.py            # Download and merge raw market data
+    ├── 02_feature_engineering.py        # Feature generation, scaling, split exports
+    ├── 03_spectrogram_generator.py      # STFT spectrogram sample creation
+    ├── 04_dataset.py                    # PyTorch Dataset and DataLoader helpers
+    ├── 05_model.py                      # SpectrogramCNN architecture definition
+    ├── 06_train.py                      # Training loop, scheduler, early stopping
+    ├── 07_evaluate.py                   # Test inference, metrics, and plots
+    └── 08_ablation.py                   # Window/horizon/feature-set ablation study
 ```
 
 ## Methodology
