@@ -69,60 +69,6 @@ Please explore all generated plots in the figures folder:
 
 For complete implementation details, see the scripts in `src/`.
 
-## Project Structure
-```text
-stock-forecasting/
-├── config.yaml                          # Central experiment configuration and hyperparameters
-├── requirements.txt                     # Python dependencies
-├── README.md                            # Project documentation
-├── .gitignore                           # Git exclusions for data/artifacts
-├── data/
-│   ├── raw/
-│   │   ├── RELIANCE.NS.csv              # Raw close series
-│   │   ├── TCS.NS.csv                   # Raw close series
-│   │   ├── INFY.NS.csv                  # Raw close series
-│   │   ├── ^BSESN.csv                   # Raw index close series
-│   │   ├── INR=X.csv                    # Raw forex close series
-│   │   └── merged_raw.csv               # Aligned merged close dataframe
-│   ├── processed/
-│   │   ├── {company}_features.csv       # Engineered feature matrix per company
-│   │   ├── {company}_train.csv          # Normalized train split
-│   │   ├── {company}_val.csv            # Normalized validation split
-│   │   ├── {company}_test.csv           # Normalized test split
-│   │   ├── {company}_scaler.pkl         # MinMax scaler fitted on train split
-│   │   ├── metrics.csv                  # Evaluation metrics across companies
-│   │   └── ablation_results.csv         # Structured ablation outputs
-│   └── spectrograms/
-│       ├── {company}_X_train.npy        # Train spectrogram tensors
-│       ├── {company}_y_train.npy        # Train targets (raw close)
-│       ├── {company}_X_val.npy          # Validation spectrogram tensors
-│       ├── {company}_y_val.npy          # Validation targets
-│       ├── {company}_X_test.npy         # Test spectrogram tensors
-│       └── {company}_y_test.npy         # Test targets
-├── figures/
-│   ├── time_series.png                  # Raw close with split boundaries
-│   ├── fft_spectrum.png                 # FFT magnitude plots
-│   ├── spectrograms.png                 # Channel-0 sample spectrograms
-│   ├── training_curve_{company}.png     # Training and validation loss curves
-│   ├── predictions_{company}.png        # Evaluation visualization panels
-│   ├── metrics_comparison.png           # RMSE and MAPE comparison chart
-│   ├── ablation.png                     # Ablation visualization summary
-│   └── cnn_architecture.png             # CNN block diagram
-├── models/
-│   └── {company}_best.pth               # Best checkpoint per company
-├── notebooks/                           # Optional exploratory notebooks
-└── src/
-    ├── __init__.py
-    ├── 01_data_collection.py            # Download and merge raw market data
-    ├── 02_feature_engineering.py        # Feature generation, scaling, split exports
-    ├── 03_spectrogram_generator.py      # STFT spectrogram sample creation
-    ├── 04_dataset.py                    # PyTorch Dataset and DataLoader helpers
-    ├── 05_model.py                      # SpectrogramCNN architecture definition
-    ├── 06_train.py                      # Training loop, scheduler, early stopping
-    ├── 07_evaluate.py                   # Test inference, metrics, and plots
-    └── 08_ablation.py                   # Window/horizon/feature-set ablation study
-```
-
 ## Methodology
 
 ### Signal Representation
