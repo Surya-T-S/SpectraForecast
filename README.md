@@ -11,12 +11,6 @@
     Time-frequency deep learning pipeline for stock forecasting using multi-channel spectrograms.
 </p>
 
-## Highlights
-- End-to-end ML workflow: collection -> features -> spectrograms -> training -> evaluation -> ablation
-- Time-frequency representation of financial signals using STFT
-- CNN regressor with reproducible experiments and saved artifacts
-- Comparative evaluation and ablation analysis with published figures
-
 ## Author Info
 
 ### Name: Surya T S
@@ -173,12 +167,6 @@ python src/08_ablation.py
 - Feature Set B (close + technical indicators) improved over close-only baseline A.
 - RELIANCE.NS was easiest to model overall (lowest RMSE, best $R^2$).
 - TCS.NS showed the largest absolute errors, while INFY.NS had the highest relative error (MAPE).
-
-## References
-1. Y. Zhang and C. Aggarwal, Stock Market Prediction Using Deep Learning, IEEE Access.
-2. A. Tsantekidis et al., Deep Learning for Financial Time Series Forecasting.
-3. S. Hochreiter and J. Schmidhuber, Long Short-Term Memory, Neural Computation, 1997.
-4. A. Borovykh et al., Conditional Time Series Forecasting with CNNs.
 
 ## License
 This project is licensed under the MIT License. See `LICENSE` for details.
