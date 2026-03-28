@@ -1,0 +1,53 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build/distribution
+build/
+dist/
+*.egg-info/
+
+# Data artifacts (keep folder structure, ignore contents)
+data/raw/*
+data/processed/*
+data/spectrograms/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/spectrograms/.gitkeep
+
+# Trained models and figures
+models/*
+figures/*
+!models/.gitkeep
+!figures/.gitkeep
+
+# Large binary artifacts
+*.npy
+*.npz
+*.pth
+*.pkl
+*.pt

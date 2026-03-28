@@ -1,0 +1,41 @@
+data:
+  companies: ['RELIANCE.NS', 'TCS.NS', 'INFY.NS']
+  market_index: '^BSESN'
+  forex: 'INR=X'
+  start_date: '2015-01-01'
+  end_date: '2024-12-31'
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+signal:
+  window_length: 32
+  hop_size: 8
+  overlap: 24
+  window_fn: 'hann'
+  log_scale: true
+  sliding_window: 64
+  forecast_horizon: 5
+
+model:
+  in_channels: 7
+  base_filters: 32
+  dropout_conv: 0.25
+  dropout_fc: 0.4
+  hidden_dim: 256
+
+training:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 15
+  grad_clip: 1.0
+  seed: 42
+
+paths:
+  raw_data: 'data/raw/'
+  processed: 'data/processed/'
+  spectrograms: 'data/spectrograms/'
+  figures: 'figures/'
+  models: 'models/'
