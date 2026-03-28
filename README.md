@@ -20,8 +20,8 @@
 ## Author
 
 <p>
-    <strong><span style="font-size: 1.2em;">Surya T S</span></strong><br/>
-    <strong><span style="font-size: 1.1em;">University ID: TCR24CS069</span></strong>
+    <strong><span style="font-size: 1.35em;">Surya T S</span></strong><br/>
+    <strong><span style="font-size: 1.2em;">University ID: TCR24CS069</span></strong>
 </p>
 
 ## Overview
