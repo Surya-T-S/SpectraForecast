@@ -11,6 +11,12 @@
     Time-frequency deep learning pipeline for stock forecasting using multi-channel spectrograms.
 </p>
 
+## Highlights
+- End-to-end ML workflow: collection -> features -> spectrograms -> training -> evaluation -> ablation
+- Time-frequency representation of financial signals using STFT
+- CNN regressor with reproducible experiments and saved artifacts
+- Comparative evaluation and ablation analysis with published figures
+
 ## Author
 - Name: Surya T S
 - University ID: TCR24CS069
@@ -27,6 +33,13 @@ Core idea:
 - Build a multivariate signal from market + technical indicators
 - Convert each rolling window into a multi-channel spectrogram tensor
 - Train CNN for regression on future raw close prices
+
+## Tech Stack
+- Python, NumPy, pandas, SciPy
+- PyTorch for deep learning
+- scikit-learn for preprocessing and metrics
+- matplotlib for visualization
+- yfinance for market data ingestion
 
 ## Quick Visuals
 
@@ -197,6 +210,11 @@ Step 7
 python src/08_ablation.py
 ```
 
+## Reproducibility
+- Config-driven experiment settings are managed in `config.yaml`
+- Random seeds are fixed in training and ablation scripts
+- Key outputs are saved to `data/processed/`, `figures/`, and `models/`
+
 ## Results
 
 ### Test Metrics (metrics.csv)
@@ -232,3 +250,6 @@ python src/08_ablation.py
 2. A. Tsantekidis et al., Deep Learning for Financial Time Series Forecasting.
 3. S. Hochreiter and J. Schmidhuber, Long Short-Term Memory, Neural Computation, 1997.
 4. A. Borovykh et al., Conditional Time Series Forecasting with CNNs.
+
+## License
+This project is licensed under the MIT License. See `LICENSE` for details.
